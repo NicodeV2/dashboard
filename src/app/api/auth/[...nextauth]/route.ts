@@ -6,16 +6,20 @@ export const authOptions = {
     CredentialsProvider({
       name: "credentials",
       credentials: {
-        username: { label: "Usuario", type: "text" },
+        email: { label: "Email", type: "text" },
         password: { label: "Contraseña", type: "password" },
       },
       async authorize(credentials) {
-        // Simulación (reemplaza con tu lógica real)
+        // Validación básica de ejemplo
         if (
-          credentials?.username === "admin" &&
+          credentials?.email === "admin@demo.cl" &&
           credentials?.password === "admin"
         ) {
-          return { id: "1", name: "Admin", email: "admin@example.com" };
+          return {
+            id: "1",
+            name: "Admin",
+            email: "admin@demo.cl",
+          };
         }
         return null;
       },

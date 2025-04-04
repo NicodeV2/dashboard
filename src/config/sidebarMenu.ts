@@ -1,14 +1,11 @@
 import {
-  AudioWaveform,
-  BookOpen,
-  Bot,
-  Command,
-  Frame,
-  GalleryVerticalEnd,
-  Map,
-  PieChart,
-  Settings2,
   SquareTerminal,
+  Bot,
+  BookOpen,
+  Settings2,
+  Frame,
+  PieChart,
+  Map,
 } from "lucide-react";
 
 export const data = {
@@ -19,123 +16,97 @@ export const data = {
   },
   teams: [
     {
-      name: "Acme Inc",
-      logo: GalleryVerticalEnd,
-      plan: "Enterprise",
+      name: "Atlas",
+      logo: "Globe",
+      plan: "Hoteleria",
     },
     {
-      name: "Acme Corp.",
-      logo: AudioWaveform,
-      plan: "Startup",
+      name: "Medusa",
+      logo: "Network",
+      plan: "BTB",
     },
     {
-      name: "Evil Corp.",
-      logo: Command,
-      plan: "Free",
+      name: "Cerbero",
+      logo: "Dog",
+      plan: "BTB",
+    },
+    {
+      name: "Thor",
+      logo: "Zap",
+      plan: "BTC",
+    },
+    {
+      name: "Interno",
+      logo: "Home",
+      plan: "Cliente Interno",
     },
   ],
-  navMain: [
-    {
-      title: "Playground",
-      url: "#",
-      icon: SquareTerminal,
-      isActive: true,
-      items: [
+  menuByTeam: {
+    Atlas: {
+      navMain: [
         {
-          title: "History",
-          url: "#",
+          title: "Reservas",
+          url: "/atlas/reservas",
+          icon: SquareTerminal,
+          isActive: true,
+          items: [
+            { title: "Historial", url: "/atlas/reservas/historial" },
+            { title: "Calendario", url: "/atlas/reservas/calendario" },
+          ],
         },
         {
-          title: "Starred",
-          url: "#",
+          title: "Hoteles",
+          url: "/atlas/hoteles",
+          icon: Bot,
+          items: [
+            { title: "Listado", url: "/atlas/hoteles/listado" },
+            { title: "Nuevo hotel", url: "/atlas/hoteles/nuevo" },
+          ],
+        },
+      ],
+      projects: [
+        {
+          name: "Gestión Hotelera",
+          url: "/atlas/proyectos/gestion",
+          icon: Frame,
         },
         {
-          title: "Settings",
-          url: "#",
+          name: "Turismo Local",
+          url: "/atlas/proyectos/turismo",
+          icon: Map,
         },
       ],
     },
-    {
-      title: "Models",
-      url: "#",
-      icon: Bot,
-      items: [
+
+    Medusa: {
+      navMain: [
         {
-          title: "Genesis",
-          url: "#",
+          title: "Reportes BTB",
+          url: "/medusa/reportes",
+          icon: BookOpen,
+          isActive: true,
+          items: [
+            { title: "Ventas", url: "/medusa/reportes/ventas" },
+            { title: "Proveedores", url: "/medusa/reportes/proveedores" },
+          ],
         },
         {
-          title: "Explorer",
-          url: "#",
+          title: "Integraciones",
+          url: "/medusa/integraciones",
+          icon: Settings2,
+          items: [
+            { title: "API Partners", url: "/medusa/integraciones/api" },
+            { title: "Logs", url: "/medusa/integraciones/logs" },
+          ],
         },
+      ],
+      projects: [
         {
-          title: "Quantum",
-          url: "#",
+          name: "BTB Regional",
+          url: "/medusa/proyectos/regional",
+          icon: PieChart,
         },
       ],
     },
-    {
-      title: "Documentation",
-      url: "#",
-      icon: BookOpen,
-      items: [
-        {
-          title: "Introduction",
-          url: "#",
-        },
-        {
-          title: "Get Started",
-          url: "#",
-        },
-        {
-          title: "Tutorials",
-          url: "#",
-        },
-        {
-          title: "Changelog",
-          url: "#",
-        },
-      ],
-    },
-    {
-      title: "Settings",
-      url: "#",
-      icon: Settings2,
-      items: [
-        {
-          title: "General",
-          url: "#",
-        },
-        {
-          title: "Team",
-          url: "#",
-        },
-        {
-          title: "Billing",
-          url: "#",
-        },
-        {
-          title: "Limits",
-          url: "#",
-        },
-      ],
-    },
-  ],
-  projects: [
-    {
-      name: "Design Engineering",
-      url: "#",
-      icon: Frame,
-    },
-    {
-      name: "Sales & Marketing",
-      url: "#",
-      icon: PieChart,
-    },
-    {
-      name: "Travel",
-      url: "#",
-      icon: Map,
-    },
-  ],
+  },
 };

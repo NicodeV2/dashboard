@@ -1,0 +1,76 @@
+[
+  {
+    "date": "2025-04-06",
+    "title": "Se agrego el componente `UpdateHistory` + fix de hidratacion en el layout",
+    "description": "El layout fue ajustado para evitar diferencias entre cliente y servidor al usar `getServerSession`. Se aplicó diseño con componentes de ShadCN/UI. Implementado `UpdateHistory` y se ajustó el layout general.",
+    "items": [
+      "Se eliminó el uso directo de `getServerSession` en `layout.tsx` para evitar mismatch.",
+      "Se usaron componentes `Card`, `CardHeader`, `CardContent` de ShadCN.",
+      "El componente `UpdateHistory` fue implementado para cargar desde JSON.",
+      "Se reorganizó el layout del dashboard para centrarlo con `max-w-5xl` y `mx-auto`."
+    ]
+  },
+  {
+    "date": "2025-04-06",
+    "title": "Sincronización completa de tema y modo oscuro",
+    "description": "Se resolvieron todos los problemas relacionados con la persistencia del tema visual y el modo dark/light al navegar entre páginas. Ahora el sistema aplica correctamente el modo y tema activo sin sobrescribir ni reiniciar estilos.",
+    "items": [
+      "El `ThemeProvider` ahora usa `storageKey=\"theme-mode\"` para mantener el modo entre rutas.",
+      "El selector de temas inicia con el tema visual actualmente aplicado, sin volver a un default.",
+      "La clase `dark` ya no se pierde al navegar entre carpetas como `/user` y `/dashboard`.",
+      "Persistencia garantizada con localStorage + cookies + SSR (sin flashes ni reseteos).",
+      "Sistema de temas listo para producción: estable, limpio y predecible."
+    ]
+  },
+  {
+    "date": "2025-04-04",
+    "title": "Modo oscuro habilitado",
+    "description": "Se integró `ThemeProvider` con soporte para tema claro/oscuro usando TailwindCSS 4. Se verificó la funcionalidad en ambos temas.",
+    "items": [
+      "Se integró `ThemeProvider` con soporte para dark/light.",
+      "TailwindCSS 4 adaptado al sistema de colores dinámico.",
+      "Funcionalidad validada en ambos modos."
+    ]
+  },
+  {
+    "date": "2025-04-03",
+    "title": "Estética y layout refinados",
+    "description": "Fonts Geist integradas. Separación de componentes entre `ThemeProvider`, `SessionProvider` y layout base. Se completó el diseño inicial del dashboard.",
+    "items": [
+      "Se integraron fuentes Geist (sans y mono).",
+      "Componentes separados y reorganizados: `ThemeProvider`, `SessionProvider`, layout.",
+      "Diseño inicial funcional del dashboard completado."
+    ]
+  },
+  {
+    "date": "2025-04-02",
+    "title": "Autenticación integrada",
+    "description": "Se configuró `next-auth` con JWT y se creó `CustomSessionProvider`. Ya se puede proteger rutas del dashboard.",
+    "items": [
+      "Configurado `next-auth` con JWT.",
+      "Creado `CustomSessionProvider` como componente cliente.",
+      "Ya se pueden proteger rutas del dashboard mediante sesión."
+    ]
+  },
+  {
+    "date": "2025-04-01",
+    "title": "Frontend configurado",
+    "description": "Se configuró Next.js 15 con App Router y Tailwind CSS 4. Se establecieron estilos base para el proyecto.",
+    "items": [
+      "Next.js 15 configurado con App Router.",
+      "Tailwind CSS 4 funcionando con estilos base.",
+      "Sistema inicial de navegación listo."
+    ]
+  },
+  {
+    "date": "2025-03-31",
+    "title": "Inicio oficial del proyecto",
+    "description": "Definición de objetivos. Backend NestJS configurado con MariaDB y TypeORM. Estructura de carpetas y Swagger listos.",
+    "items": [
+      "Se definió el objetivo del dashboard y sistema de reservas.",
+      "NestJS configurado con MariaDB y TypeORM.",
+      "Swagger habilitado para documentar la API.",
+      "Estructura de carpetas organizada: `entities`, `dto`, `controllers`, `services`."
+    ]
+  }
+]

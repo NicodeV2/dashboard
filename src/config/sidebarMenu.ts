@@ -66,8 +66,8 @@ export const data = {
       ],
       projects: [
         {
-          name: "Gestión Hotelera",
-          url: "/atlas/proyectos/gestion",
+          name: "Historial de actualizaciones",
+          url: "/dashboard",
           icon: Frame,
         },
         {
